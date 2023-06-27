@@ -26,7 +26,7 @@ resource "azurerm_cdn_frontdoor_origin_group" "default" {
 
   health_probe {
     interval_in_seconds = 120
-    path                = "/docs"
+    path                = "/api/v1/status/health"
     protocol            = "Https"
     request_type        = "HEAD"
   }
