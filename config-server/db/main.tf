@@ -56,4 +56,8 @@ resource "azurerm_cosmosdb_account" "db" {
       failover_priority = index(var.locations, geo_location.value)
     }
   }
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
